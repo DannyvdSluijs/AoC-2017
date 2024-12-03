@@ -1,0 +1,23 @@
+{
+    "name": "dannyvdsluijs/advent-of-code-2017",
+    "description": "Solutions to the Advent of Code 2017 puzzles",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Danny van der Sluijs",
+            "email": "danny.vandersluijs@icloud.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.4",
+        "rector/rector": "^1.2",
+        "phpstan/phpstan": "^1.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dannyvdsluijs\\AdventOfCode2017\\": "src"
+        }
+    }
+}
