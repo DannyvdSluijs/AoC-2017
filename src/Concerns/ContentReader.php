@@ -69,7 +69,18 @@ trait ContentReader
     public function readInputAsGridOfNumbers(): array
     {
         $lines = $this->readInputAsLines();
-        return array_map(static fn($line) => array_map(intval(...), array_values(array_filter(explode(' ', $line)))), $lines);
+        $lines = array_map(fn (string $in): string => str_replace("\t", ' ', $in), $lines);
+        return array_map(
+            static fn($line) => array_map(
+                intval(...),
+                array_values(
+                    array_filter(
+                        explode(' ', $line)
+                    )
+                )
+            ),
+            $lines
+        );
     }
 
     /** @return list<list<string>> */
